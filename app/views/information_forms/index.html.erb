@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Information forms</h1>
+
+<div id="informationforms">
+  <% @information_forms.each do |information_form| %>
+    <%= render information_form %>
+    <p>
+      <%= link_to "Show this informationform", information_form %>
+    </p>
+  <% end %>
+</div>
+
+<%# <% if @information_forms.count == 1 %>
+  <%# <br><br><p>* Your information has been sent to the sites administrator. Feel free to update it when ever necessary.</p> %>
+<%# <% end %>
+
+<%= link_to "New informationform", new_information_form_path %>

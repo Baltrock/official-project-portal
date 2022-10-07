@@ -1,0 +1,11 @@
+This is a the front-page of the INVESTOR root<br>
+
+<%= link_to "Information Form", form_of_information_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
+<%= link_to "Please input your company information", company_info_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
+<%= link_to "I would like to invest in Project Portal", sponsor_form_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
+<%= link_to "I would like to invest in an individual projects", support_form_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
+<%= link_to "Complaint", form_complaint_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+<%= link_to "Transfer", form_transfer_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+<%= link_to "Resign", form_resign_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+<br>
+<%= button_to "Log out", destroy_investor_session_path, method: :delete, form: {  data: { turbo: :false } }, class: "dropdown-item" %>

@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Ben overall project finance forms</h1>
+
+<div id="ben_overall_project_finance_forms">
+  <% @ben_overall_project_finance_forms.each do |ben_overall_project_finance_form| %>
+    <%= render ben_overall_project_finance_form %>
+    <p>
+      <%= link_to "Show this ben overall project finance form", ben_overall_project_finance_form %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New ben overall project finance form", new_ben_overall_project_finance_form_path %>
+<%= link_to "Back to the main page", ben_registration_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>

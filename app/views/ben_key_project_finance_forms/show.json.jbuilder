@@ -1,0 +1,1 @@
+json.partial! "ben_key_project_finance_forms/ben_key_project_finance_form", ben_key_project_finance_form: @ben_key_project_finance_form

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Resignationality forms</h1>
+
+<div id="resignationality_forms">
+  <% @resignationality_forms.each do |resignationality_form| %>
+    <%= render resignationality_form %>
+    <p>
+      <%= link_to "Show this resignationality form", resignationality_form %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New resignationality form", new_resignationality_form_path %>

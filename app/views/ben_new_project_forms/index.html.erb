@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Ben new project forms</h1>
+
+<div id="ben_new_project_forms">
+  <% @ben_new_project_forms.each do |ben_new_project_form| %>
+    <%= render ben_new_project_form %>
+    <p>
+      <%= link_to "Show this ben new project form", ben_new_project_form %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New ben new project form", new_ben_new_project_form_path %>
+<%= link_to "Back to the main page", ben_registration_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>

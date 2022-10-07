@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ben_management_update_form %>
+
+<div>
+  <%= link_to "Edit this ben management update form", edit_ben_management_update_form_path(@ben_management_update_form) %> |
+  <%= link_to "Back to ben management update forms", ben_management_update_forms_path %>
+
+  <%= button_to "Destroy this ben management update form", @ben_management_update_form, method: :delete %>
+</div>

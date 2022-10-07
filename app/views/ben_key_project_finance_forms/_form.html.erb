@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@ben_key_project_finance_form) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :project_title %>
+    <%= f.input :project_description %>
+    <%= f.input :total_investment %>
+    <%= f.input :currency %>
+    <%= f.input :update %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

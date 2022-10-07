@@ -1,0 +1,91 @@
+This is a the front-page of YOUR root<br>
+
+Here are your forms: <br>
+<%= link_to "General Update Forms", primary_update_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
+<%= link_to "User Update Forms", user_update_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+<%= link_to "Investor Update Forms", investor_update_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
+<%= link_to "Management Update Forms", management_update_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+<%= link_to "Selection Forms", bens_selection_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
+<%= link_to "New Project Forms", new_project_form_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+<%= link_to "Available Frontstage Jobs Forms", available_frontstage_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
+<%= link_to "Available Backstage Jobs Forms", available_backstage_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+<%= link_to "Complaint Forms", form_complaint_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
+<%= button_to "Log out", destroy_ben_session_path, method: :delete, form: {  data: { turbo: :false } }, class: "dropdown-item" %>
+<br>
+<br>
+
+<div class="benscard">
+  <% ManagementApplicantForm.all.each do |form| %>
+    <%= render @management_applicant_form %>
+  <% end %>
+</div>
+<div class="benscard">
+  <% ActorApplicantForm.all.each do |form| %>
+    <%= render @actor_applicant_form %>
+  <% end %>
+</div>
+<div class="benscard">
+  <% ArtistApplicantForm.all.each do |form| %>
+    <%= render @artist_applicant_form %>
+  <% end %>
+</div>
+<div class="benscard">
+  <% MusicianApplicantForm.all.each do |form| %>
+    <%= render @musician_applicant_form %>
+  <% end %>
+</div>
+<div class="benscard">
+  <% CrewApplicantForm.all do |form| %>
+    <%= render @crew_applicant_form %>
+  <% end %>
+</div>
+<div class="benscard">
+  <% InvestorCompanyForm.all.each do |form| %>
+    <%= render @investor_company_form %>
+  <% end %>
+</div>
+<div class="benscard">
+  <% ComplaintForm.all.each do |form|%>
+    <%= render @complaint_form %>
+  <% end %>
+</div>
+<div class="benscard">
+  <% InformationForm.all.each do |form|%>
+    <%= render @information_form %>
+  <% end %>
+</div>
+<div class="benscard">
+  <% InvestorCompanyForm.all.each do |form|%>
+    <%= render @investor_company_form %>
+  <% end %>
+</div>
+<div class="benscard">
+  <% InvestorSponsorForm.all.each do |form|%>
+    <%= render @investor_sponsor_form %>
+  <% end %>
+</div>
+<div class="benscard">
+  <% InvestorSupportForm.all.each do |form|%>
+    <%= render @investor_support_form %>
+  <% end %>
+</div>
+<div class="benscard">
+  <% ManagementRequestForm.all.each do |form|%>
+    <%= render @management_request_form %>
+  <% end %>
+</div>
+<div class="benscard">
+  <% ManagementReviewForm.all.each do |form|%>
+    <%= render @management_review_form %>
+  <% end %>
+</div>
+<div class="benscard">
+  <% ResignationForm.all.each do |form|%>
+    <%= render @resignation_form %>
+  <% end %>
+</div>
+<div class="benscard">
+  <% TransferForm.all.each do |form|%>
+    <%= render @transfer_form %>
+  <% end %>
+</div>

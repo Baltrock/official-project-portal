@@ -1,0 +1,12 @@
+This is a the front-page of the MANAGEMENT root<br>
+
+<%= link_to "Information Form", form_of_information_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
+<%= link_to "Apply to join the Project Portal Management Team", company_info_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
+<%= link_to "Make a Request", sponsor_form_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
+<%= link_to "Review for Project Portal member", support_form_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
+<%= link_to "Complaint", form_complaint_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+<%= link_to "Transfer", form_transfer_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+<%= link_to "Resign", form_resign_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+<br>
+
+<%= button_to "Log out", destroy_management_session_path, method: :delete, form: {  data: { turbo: :false } }, class: "dropdown-item" %>

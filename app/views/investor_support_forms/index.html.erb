@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Investor support forms</h1>
+
+<div id="investor_support_forms">
+  <% @investor_support_forms.each do |investor_support_form| %>
+    <%= render investor_support_form %>
+    <p>
+      <%= link_to "Show this investor support form", investor_support_form %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New investor support form", new_investor_support_form_path %>
+<%= link_to "Back to the main page", investor_registration_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>

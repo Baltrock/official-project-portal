@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ben_selection_form %>
+
+<div>
+  <%= link_to "Edit this ben selection form", edit_ben_selection_form_path(@ben_selection_form) %> |
+  <%= link_to "Back to ben selection forms", ben_selection_forms_path %>
+
+  <%= button_to "Destroy this ben selection form", @ben_selection_form, method: :delete %>
+</div>

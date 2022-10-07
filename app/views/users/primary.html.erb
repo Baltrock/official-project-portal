@@ -1,0 +1,12 @@
+This is a the front-page of the USER root<br>
+
+<%= link_to "Information Form", form_of_information_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
+<%= link_to "Become an Actor", actor_applicant_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+<%= link_to "Become an Artist", artist_applicant_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
+<%= link_to "Join the Crew", crew_applicant_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+<%= link_to "Become a Musician", musician_form_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
+<%= link_to "Complaint", form_complaint_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+<%= link_to "Transfer", form_transfer_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+<%= link_to "Resign", form_resign_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
+
+<%= button_to "Log out", destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } }, class: "dropdown-item" %>
