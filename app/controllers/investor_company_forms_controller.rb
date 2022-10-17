@@ -4,6 +4,7 @@ class InvestorCompanyFormsController < ApplicationController
   # GET /investor_company_forms or /investor_company_forms.json
   def index
     @investor_company_forms = InvestorCompanyForm.all
+    @investor_company_forms = InvestorCompanyForm.where(investor: current_investor)
   end
 
   # GET /investor_company_forms/1 or /investor_company_forms/1.json
@@ -22,6 +23,7 @@ class InvestorCompanyFormsController < ApplicationController
   # POST /investor_company_forms or /investor_company_forms.json
   def create
     @investor_company_form = InvestorCompanyForm.new(investor_company_form_params)
+    @investor_company_form.investor = current_investor
 
     respond_to do |format|
       if @investor_company_form.save

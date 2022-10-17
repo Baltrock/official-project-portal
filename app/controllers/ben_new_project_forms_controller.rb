@@ -22,6 +22,7 @@ class BenNewProjectFormsController < ApplicationController
   # POST /ben_new_project_forms or /ben_new_project_forms.json
   def create
     @ben_new_project_form = BenNewProjectForm.new(ben_new_project_form_params)
+    @ben_new_project_form.ben = current_user
 
     respond_to do |format|
       if @ben_new_project_form.save

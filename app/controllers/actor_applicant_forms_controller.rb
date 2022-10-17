@@ -22,7 +22,7 @@ class ActorApplicantFormsController < ApplicationController
   # POST /actor_applicant_forms or /actor_applicant_forms.json
   def create
     @actor_applicant_form = ActorApplicantForm.new(actor_applicant_form_params)
-    @information_form.user = current_user
+    @actor_applicant_form.user = current_user
 
     respond_to do |format|
       if @actor_applicant_form.save

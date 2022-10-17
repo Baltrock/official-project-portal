@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   resources :ben_key_project_finance_forms
   resources :ben_overall_project_finance_forms
   resources :glitch_input_forms
-  devise_for :glitches
   resources :ben_update_forms
   resources :ben_user_update_forms
   resources :ben_investor_update_forms
@@ -32,8 +31,6 @@ Rails.application.routes.draw do
   devise_for :managements, controllers: { registrations: "managements/registrations" }
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  post "/signup", to: "users#create"
-  post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
 
   get '/ben_key_project_finance_forms', to: 'ben_key_project_finance_forms#index', as: :key_project_finance
@@ -62,10 +59,10 @@ Rails.application.routes.draw do
   get '/complaint_forms', to: 'complaint_forms#index', as: :form_complaint
   get '/resignation_form', to: 'resignation_forms#index', as: :form_resign
 
-  post "/signup", to: "users#create"
-  post "/signup", to: "investors#create"
-  post "/signup", to: "managements#create"
-  post "/signup", to: "bens#create"
+  post "users/signup", to: "users#create"
+  post "investors/signup", to: "investors#create"
+  post "managements/signup", to: "managements#create"
+  post "bens/signup", to: "bens#create"
   post "users/login", to: "sessions#create"
   post "bens/login", to: "sessions#create"
   post "managements/login", to: "sessions#create"
@@ -79,6 +76,6 @@ Rails.application.routes.draw do
   get 'users' => 'users#primary', as: :user_root
   get 'investors' => 'investors#primary', as: :investor_root
   get 'managements' => 'managements#primary', as: :management_root
-  get 'glitches' => 'glitch#primary', as: :glitch_root
+
 
 end

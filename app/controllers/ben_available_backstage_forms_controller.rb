@@ -22,6 +22,7 @@ class BenAvailableBackstageFormsController < ApplicationController
   # POST /ben_available_backstage_forms or /ben_available_backstage_forms.json
   def create
     @ben_available_backstage_form = BenAvailableBackstageForm.new(ben_available_backstage_form_params)
+    @ben_available_backstage_form.ben = current_ben
 
     respond_to do |format|
       if @ben_available_backstage_form.save

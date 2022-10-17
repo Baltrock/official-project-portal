@@ -9,7 +9,7 @@ Here are your forms: <br>
 <%= link_to "New Project Forms", new_project_form_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
 <%= link_to "Available Frontstage Jobs Forms", available_frontstage_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
 <%= link_to "Available Backstage Jobs Forms", available_backstage_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %>
-<%= link_to "Complaint Forms", form_complaint_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
+<%# <%= link_to "Complaint Forms", form_complaint_url, class: "btn btn-pink text-grey text-uppercase rounded-pill fw-bold" %><br>
 <%= button_to "Log out", destroy_ben_session_path, method: :delete, form: {  data: { turbo: :false } }, class: "dropdown-item" %>
 <br>
 <br>
@@ -35,7 +35,7 @@ Here are your forms: <br>
   <% end %>
 </div>
 <div class="benscard">
-  <% CrewApplicantForm.all do |form| %>
+  <% CrewApplicantForm.all.each do |form| %>
     <%= render @crew_applicant_form %>
   <% end %>
 </div>

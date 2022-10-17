@@ -22,6 +22,7 @@ class BenKeyProjectFinanceFormsController < ApplicationController
   # POST /ben_key_project_finance_forms or /ben_key_project_finance_forms.json
   def create
     @ben_key_project_finance_form = BenKeyProjectFinanceForm.new(ben_key_project_finance_form_params)
+    @ben_key_project_finance_form.ben = current_user
 
     respond_to do |format|
       if @ben_key_project_finance_form.save

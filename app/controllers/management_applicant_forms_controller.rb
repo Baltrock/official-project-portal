@@ -3,16 +3,12 @@ class ManagementApplicantFormsController < ApplicationController
 
   # GET /management_applicant_forms or /management_applicant_forms.json
   def index
-    if current_user.ben?
-      @management_applicant_forms = ManagementApplicantForm.all
-    else
-      @management_applicant_forms = ManagementApplicantForm.where(user: current_user)
-    end
+    @management_applicant_forms = InvestorSponsorForm.all
   end
 
   # GET /management_applicant_forms/1 or /management_applicant_forms/1.json
   def show
-    if current_user.ben?
+    if current_user.management?
       @management_applicant_forms = ManagementApplicantForm.all
     else
       @management_applicant_forms = ManagementApplicantForm.where(user: current_user)
@@ -31,6 +27,7 @@ class ManagementApplicantFormsController < ApplicationController
   # POST /management_applicant_forms or /management_applicant_forms.json
   def create
     @management_applicant_form = ManagementApplicantForm.new(management_applicant_form_params)
+    @management_applicant_form.management = current_user
 
     respond_to do |format|
       if @management_applicant_form.save

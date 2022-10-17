@@ -22,6 +22,7 @@ class InvestorSponsorFormsController < ApplicationController
   # POST /investor_sponsor_forms or /investor_sponsor_forms.json
   def create
     @investor_sponsor_form = InvestorSponsorForm.new(investor_sponsor_form_params)
+    @investor_sponsor_form.investor = current_user
 
     respond_to do |format|
       if @investor_sponsor_form.save

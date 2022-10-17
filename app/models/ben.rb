@@ -12,5 +12,6 @@ class Ben < ApplicationRecord
   has_many :ben_selection_forms, dependent: :destroy
   has_many :ben_update_forms, dependent: :destroy
   has_many :ben_user_update_forms, dependent: :destroy
-  has_many :complaint_forms, dependent: :destroy
+  has_many :glitch_input_forms, dependent: :destroy
+  # has_many :complaint_forms, dependent: :destroy
 end

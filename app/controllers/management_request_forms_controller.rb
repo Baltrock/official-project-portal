@@ -22,6 +22,7 @@ class ManagementRequestFormsController < ApplicationController
   # POST /management_request_forms or /management_request_forms.json
   def create
     @management_request_form = ManagementRequestForm.new(management_request_form_params)
+    @management_request_form.management = current_user
 
     respond_to do |format|
       if @management_request_form.save

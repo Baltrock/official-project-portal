@@ -3,11 +3,12 @@ class CrewApplicantFormsController < ApplicationController
 
   # GET /crew_applicant_forms or /crew_applicant_forms.json
   def index
-    @crew_applicant_forms = CrewApplicantForm.all
+    @crew_applicant_forms = CrewApplicantForm.where(user: current_user)
   end
 
   # GET /crew_applicant_forms/1 or /crew_applicant_forms/1.json
   def show
+    # @crew_applicant_forms = CrewApplicantForm.where(user: current_user)
   end
 
   # GET /crew_applicant_forms/new

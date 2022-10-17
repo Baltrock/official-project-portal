@@ -5,6 +5,16 @@ class PagesController < ApplicationController
   def about
   end
 
+  # if current_user = investor
+  #   redirect_to investor_path
+  # elsif current_user = management
+  #   redirect_to management_path
+  # elsif current_user = ben
+  #   redirect_to ben_path
+  # else
+  #   redirect_to user_path
+  # end
+
   def contact
   end
 

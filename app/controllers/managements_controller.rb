@@ -1,5 +1,11 @@
 class ManagementsController < ApplicationController
   before_action :set_information_form, only: %i[ show edit update destroy ]
+  before_action :find_user
+
+
+  def find_user
+    @management = User.find_by(params[:id])
+  end
 
   # GET /information_forms or /information_forms.json
   def primary

@@ -7,7 +7,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "availability",
       "type": "String",
@@ -140,7 +140,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "art_form",
       "type": "String",
@@ -288,7 +288,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "ben_available_backstage_forms",
       "type": ["Number"],
@@ -418,22 +418,6 @@
       "widget": null,
       "validations": []
     }, {
-      "field": "complaint_forms",
-      "type": ["Number"],
-      "default_value": null,
-      "enums": null,
-      "integration": null,
-      "is_filterable": false,
-      "is_read_only": false,
-      "is_required": false,
-      "is_sortable": true,
-      "is_virtual": false,
-      "reference": "ComplaintForm.id",
-      "inverse_of": "ben",
-      "relationship": "HasMany",
-      "widget": null,
-      "validations": []
-    }, {
       "field": "created_at",
       "type": "Date",
       "default_value": null,
@@ -476,6 +460,22 @@
       "is_virtual": false,
       "reference": null,
       "inverse_of": null,
+      "widget": null,
+      "validations": []
+    }, {
+      "field": "glitch_input_forms",
+      "type": ["Number"],
+      "default_value": null,
+      "enums": null,
+      "integration": null,
+      "is_filterable": false,
+      "is_read_only": false,
+      "is_required": false,
+      "is_sortable": true,
+      "is_virtual": false,
+      "reference": "GlitchInputForm.id",
+      "inverse_of": "ben",
+      "relationship": "HasMany",
       "widget": null,
       "validations": []
     }, {
@@ -588,7 +588,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "applicant_window_end",
       "type": "Date",
@@ -751,7 +751,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "applicant_window_end",
       "type": "Date",
@@ -929,7 +929,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "ben",
       "type": "Number",
@@ -1047,7 +1047,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "ben",
       "type": "Number",
@@ -1195,7 +1195,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "ben",
       "type": "Number",
@@ -1313,7 +1313,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "available_backstage_roles",
       "type": "String",
@@ -1461,7 +1461,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "ben",
       "type": "Number",
@@ -1609,7 +1609,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "applicant_selection",
       "type": "String",
@@ -1727,7 +1727,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "ben",
       "type": "Number",
@@ -1845,7 +1845,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "ben",
       "type": "Number",
@@ -1963,7 +1963,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "additional_information",
       "type": "String",
@@ -1980,7 +1980,7 @@
       "widget": null,
       "validations": []
     }, {
-      "field": "ben",
+      "field": "ben_id",
       "type": "Number",
       "default_value": null,
       "enums": null,
@@ -1990,9 +1990,8 @@
       "is_required": false,
       "is_sortable": true,
       "is_virtual": false,
-      "reference": "Ben.id",
-      "inverse_of": "complaint_forms",
-      "relationship": "BelongsTo",
+      "reference": null,
+      "inverse_of": null,
       "widget": null,
       "validations": []
     }, {
@@ -2159,7 +2158,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "availability",
       "type": "String",
@@ -2277,185 +2276,13 @@
       "is_sortable": true,
       "is_virtual": false,
       "reference": "User.id",
-      "inverse_of": null,
+      "inverse_of": "crew_applicant_forms",
       "relationship": "BelongsTo",
       "widget": null,
       "validations": []
     }],
     "segments": [],
     "actions": []
-  }, {
-    "name": "Glitch",
-    "name_old": "glitches",
-    "icon": null,
-    "is_read_only": false,
-    "is_searchable": true,
-    "is_virtual": false,
-    "only_for_relationships": false,
-    "paginationality_type": "page",
-    "fields": [{
-      "field": "created_at",
-      "type": "Date",
-      "default_value": null,
-      "enums": null,
-      "integration": null,
-      "is_filterable": true,
-      "is_read_only": false,
-      "is_required": false,
-      "is_sortable": true,
-      "is_virtual": false,
-      "reference": null,
-      "inverse_of": null,
-      "widget": null,
-      "validations": []
-    }, {
-      "field": "email",
-      "type": "String",
-      "default_value": "",
-      "enums": null,
-      "integration": null,
-      "is_filterable": true,
-      "is_read_only": false,
-      "is_required": false,
-      "is_sortable": true,
-      "is_virtual": false,
-      "reference": null,
-      "inverse_of": null,
-      "widget": null,
-      "validations": []
-    }, {
-      "field": "password",
-      "type": "String",
-      "default_value": "",
-      "enums": null,
-      "integration": null,
-      "is_filterable": true,
-      "is_read_only": false,
-      "is_required": false,
-      "is_sortable": true,
-      "is_virtual": false,
-      "reference": null,
-      "inverse_of": null,
-      "widget": null,
-      "validations": []
-    }, {
-      "field": "glitch_input_forms",
-      "type": ["Number"],
-      "default_value": null,
-      "enums": null,
-      "integration": null,
-      "is_filterable": false,
-      "is_read_only": false,
-      "is_required": false,
-      "is_sortable": true,
-      "is_virtual": false,
-      "reference": "GlitchInputForm.id",
-      "inverse_of": "glitch",
-      "relationship": "HasMany",
-      "widget": null,
-      "validations": []
-    }, {
-      "field": "id",
-      "type": "Number",
-      "default_value": null,
-      "enums": null,
-      "integration": null,
-      "is_filterable": true,
-      "is_read_only": false,
-      "is_required": false,
-      "is_sortable": true,
-      "is_virtual": false,
-      "reference": null,
-      "inverse_of": null,
-      "widget": null,
-      "validations": []
-    }, {
-      "field": "remember_created_at",
-      "type": "Date",
-      "default_value": null,
-      "enums": null,
-      "integration": null,
-      "is_filterable": true,
-      "is_read_only": false,
-      "is_required": false,
-      "is_sortable": true,
-      "is_virtual": false,
-      "reference": null,
-      "inverse_of": null,
-      "widget": null,
-      "validations": []
-    }, {
-      "field": "reset_password_sent_at",
-      "type": "Date",
-      "default_value": null,
-      "enums": null,
-      "integration": null,
-      "is_filterable": true,
-      "is_read_only": false,
-      "is_required": false,
-      "is_sortable": true,
-      "is_virtual": false,
-      "reference": null,
-      "inverse_of": null,
-      "widget": null,
-      "validations": []
-    }, {
-      "field": "reset_password_token",
-      "type": "String",
-      "default_value": null,
-      "enums": null,
-      "integration": null,
-      "is_filterable": true,
-      "is_read_only": false,
-      "is_required": false,
-      "is_sortable": true,
-      "is_virtual": false,
-      "reference": null,
-      "inverse_of": null,
-      "widget": null,
-      "validations": []
-    }, {
-      "field": "updated_at",
-      "type": "Date",
-      "default_value": null,
-      "enums": null,
-      "integration": null,
-      "is_filterable": true,
-      "is_read_only": false,
-      "is_required": false,
-      "is_sortable": true,
-      "is_virtual": false,
-      "reference": null,
-      "inverse_of": null,
-      "widget": null,
-      "validations": []
-    }],
-    "segments": [],
-    "actions": [{
-      "name": "Change password",
-      "type": "bulk",
-      "base_url": null,
-      "endpoint": "forest/actions/change-password",
-      "http_method": "POST",
-      "redirect": null,
-      "download": false,
-      "fields": [{
-        "field": "New password",
-        "type": "String",
-        "default_value": null,
-        "enums": null,
-        "is_required": false,
-        "is_read_only": false,
-        "reference": null,
-        "description": null,
-        "position": 0,
-        "widget": null
-      }],
-      "hooks": {
-        "load": false,
-        "change": []
-      }
-    }]
   }, {
     "name": "GlitchInputForm",
     "name_old": "glitch_input_forms",
@@ -2464,8 +2291,24 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
+      "field": "ben",
+      "type": "Number",
+      "default_value": null,
+      "enums": null,
+      "integration": null,
+      "is_filterable": true,
+      "is_read_only": false,
+      "is_required": false,
+      "is_sortable": true,
+      "is_virtual": false,
+      "reference": "Ben.id",
+      "inverse_of": "glitch_input_forms",
+      "relationship": "BelongsTo",
+      "widget": null,
+      "validations": []
+    }, {
       "field": "created_at",
       "type": "Date",
       "default_value": null,
@@ -2481,7 +2324,7 @@
       "widget": null,
       "validations": []
     }, {
-      "field": "glitch",
+      "field": "glitch_id",
       "type": "Number",
       "default_value": null,
       "enums": null,
@@ -2491,9 +2334,8 @@
       "is_required": false,
       "is_sortable": true,
       "is_virtual": false,
-      "reference": "Glitch.id",
-      "inverse_of": "glitch_input_forms",
-      "relationship": "BelongsTo",
+      "reference": null,
+      "inverse_of": null,
       "widget": null,
       "validations": []
     }, {
@@ -2597,7 +2439,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "age",
       "type": "Number",
@@ -2766,7 +2608,7 @@
       "widget": null,
       "validations": []
     }, {
-      "field": "nationality",
+      "field": "nation",
       "type": "String",
       "default_value": null,
       "enums": null,
@@ -2852,7 +2694,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "complaint_forms",
       "type": ["Number"],
@@ -3039,7 +2881,7 @@
       "widget": null,
       "validations": []
     }, {
-      "field": "resignationality_form",
+      "field": "resignation_form",
       "type": "Number",
       "default_value": null,
       "enums": null,
@@ -3049,7 +2891,7 @@
       "is_required": false,
       "is_sortable": true,
       "is_virtual": false,
-      "reference": "ResignationalityForm.id",
+      "reference": "ResignationForm.id",
       "inverse_of": "investor",
       "relationship": "HasOne",
       "widget": null,
@@ -3104,7 +2946,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "company_address",
       "type": "String",
@@ -3252,7 +3094,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "created_at",
       "type": "Date",
@@ -3415,7 +3257,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "created_at",
       "type": "Date",
@@ -3548,7 +3390,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "complaint_forms",
       "type": ["Number"],
@@ -3735,7 +3577,7 @@
       "widget": null,
       "validations": []
     }, {
-      "field": "resignationality_form",
+      "field": "resignation_form",
       "type": "Number",
       "default_value": null,
       "enums": null,
@@ -3745,7 +3587,7 @@
       "is_required": false,
       "is_sortable": true,
       "is_virtual": false,
-      "reference": "ResignationalityForm.id",
+      "reference": "ResignationForm.id",
       "inverse_of": "management",
       "relationship": "HasOne",
       "widget": null,
@@ -3816,7 +3658,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "availability",
       "type": "String",
@@ -3949,7 +3791,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "created_at",
       "type": "Date",
@@ -4097,7 +3939,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "created_at",
       "type": "Date",
@@ -4245,7 +4087,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "availability",
       "type": "String",
@@ -4386,14 +4228,14 @@
     "segments": [],
     "actions": []
   }, {
-    "name": "ResignationalityForm",
-    "name_old": "resignationality_forms",
+    "name": "ResignationForm",
+    "name_old": "resignation_forms",
     "icon": null,
     "is_read_only": false,
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "additional_information",
       "type": "String",
@@ -4451,7 +4293,7 @@
       "is_sortable": true,
       "is_virtual": false,
       "reference": "Investor.id",
-      "inverse_of": "resignationality_form",
+      "inverse_of": "resignation_form",
       "relationship": "BelongsTo",
       "widget": null,
       "validations": []
@@ -4467,7 +4309,7 @@
       "is_sortable": true,
       "is_virtual": false,
       "reference": "Management.id",
-      "inverse_of": "resignationality_form",
+      "inverse_of": "resignation_form",
       "relationship": "BelongsTo",
       "widget": null,
       "validations": []
@@ -4517,7 +4359,7 @@
       "widget": null,
       "validations": []
     }, {
-      "field": "resignationality_cause",
+      "field": "resignation_cause",
       "type": "String",
       "default_value": null,
       "enums": null,
@@ -4558,7 +4400,7 @@
       "is_sortable": true,
       "is_virtual": false,
       "reference": "User.id",
-      "inverse_of": "resignationality_form",
+      "inverse_of": "resignation_form",
       "relationship": "BelongsTo",
       "widget": null,
       "validations": []
@@ -4573,7 +4415,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "created_at",
       "type": "Date",
@@ -4737,7 +4579,7 @@
     "is_searchable": true,
     "is_virtual": false,
     "only_for_relationships": false,
-    "paginationality_type": "page",
+    "pagination_type": "page",
     "fields": [{
       "field": "actor_applicant_forms",
       "type": ["Number"],
@@ -4802,6 +4644,22 @@
       "widget": null,
       "validations": []
     }, {
+      "field": "crew_applicant_forms",
+      "type": ["Number"],
+      "default_value": null,
+      "enums": null,
+      "integration": null,
+      "is_filterable": false,
+      "is_read_only": false,
+      "is_required": false,
+      "is_sortable": true,
+      "is_virtual": false,
+      "reference": "CrewApplicantForm.id",
+      "inverse_of": "user",
+      "relationship": "HasMany",
+      "widget": null,
+      "validations": []
+    }, {
       "field": "email",
       "type": "String",
       "default_value": "",
@@ -4829,22 +4687,6 @@
       "is_virtual": false,
       "reference": null,
       "inverse_of": null,
-      "widget": null,
-      "validations": []
-    }, {
-      "field": "glitch_input_forms",
-      "type": ["Number"],
-      "default_value": null,
-      "enums": null,
-      "integration": null,
-      "is_filterable": false,
-      "is_read_only": false,
-      "is_required": false,
-      "is_sortable": true,
-      "is_virtual": false,
-      "reference": "GlitchInputForm.id",
-      "inverse_of": null,
-      "relationship": "HasMany",
       "widget": null,
       "validations": []
     }, {
@@ -4940,7 +4782,7 @@
       "widget": null,
       "validations": []
     }, {
-      "field": "resignationality_form",
+      "field": "resignation_form",
       "type": "Number",
       "default_value": null,
       "enums": null,
@@ -4950,7 +4792,7 @@
       "is_required": false,
       "is_sortable": true,
       "is_virtual": false,
-      "reference": "ResignationalityForm.id",
+      "reference": "ResignationForm.id",
       "inverse_of": "user",
       "relationship": "HasOne",
       "widget": null,

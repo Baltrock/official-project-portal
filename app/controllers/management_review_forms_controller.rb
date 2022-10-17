@@ -22,6 +22,7 @@ class ManagementReviewFormsController < ApplicationController
   # POST /management_review_forms or /management_review_forms.json
   def create
     @management_review_form = ManagementReviewForm.new(management_review_form_params)
+    @management_review_form.management = current_user
 
     respond_to do |format|
       if @management_review_form.save

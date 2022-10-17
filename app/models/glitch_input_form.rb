@@ -1,3 +1,3 @@
 class GlitchInputForm < ApplicationRecord
-  belongs_to :glitch
+  belongs_to :ben
 end

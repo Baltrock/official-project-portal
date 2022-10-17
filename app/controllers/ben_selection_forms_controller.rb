@@ -22,6 +22,7 @@ class BenSelectionFormsController < ApplicationController
   # POST /ben_selection_forms or /ben_selection_forms.json
   def create
     @ben_selection_form = BenSelectionForm.new(ben_selection_form_params)
+    @ben_selection_form.ben = current_ben
 
     respond_to do |format|
       if @ben_selection_form.save

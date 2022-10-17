@@ -5,7 +5,7 @@ class Managements::RegistrationsController < Devise::RegistrationsController
 
   def after_sign_in_path(resource)
     if resource.is_management
-      :investor_path
+      :management_path
     elsif resource.is_admin == false
       :users_path
     else

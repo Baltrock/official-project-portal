@@ -1,6 +1,11 @@
 class BenController < ApplicationController
-  # before_action :authenticate_user!
-  # before_action :set_information_form, only: %i[ show edit update destroy]
+  before_action :set_ben_new_project_form, only: %i[ show edit update destroy]
+  before_action :find_user
+
+
+  def find_user
+    @ben = User.find_by(params[:id])
+  end
 
   # GET /information_forms or /information_forms.json
   def primary
@@ -9,19 +14,19 @@ class BenController < ApplicationController
 
   # GET /user/1 or /user/1.json
   def show
-    @management_applicant_forms.all
-    @actor_applicant_form.all
-    @artist_applicant_form.all
-    @musician_applicant_form.all
-    @crew_applicant_form.all
-    @investor_company_form.all
+    # @management_applicant_forms.all
+    # @actor_applicant_form.all
+    # @artist_applicant_form.all
+    # @musician_applicant_form.all
+    # @crew_applicant_form.all
+    # @investor_company_form.all
     @complaint_form.all
     @information_form.all
-    @investor_company_form.all
-    @investor_sponsor_form.all
-    @investor_support_form.all
-    @management_request_form.all
-    @management_review_form.all
+    # @investor_company_form.all
+    # @investor_sponsor_form.all
+    # @investor_support_form.all
+    # @management_request_form.all
+    # @management_review_form.all
     @resignation_form.all
     @transfer_form.all
   end

@@ -22,6 +22,8 @@ class ArtistApplicantFormsController < ApplicationController
   # POST /artist_applicant_forms or /artist_applicant_forms.json
   def create
     @artist_applicant_form = ArtistApplicantForm.new(artist_applicant_form_params)
+    @artist_applicant_form.user = current_user
+
 
 
     respond_to do |format|

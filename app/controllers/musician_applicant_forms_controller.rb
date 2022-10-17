@@ -21,8 +21,9 @@ class MusicianApplicantFormsController < ApplicationController
 
   # POST /musician_applicant_forms or /musician_applicant_forms.json
   def create
+
     @musician_applicant_form = MusicianApplicantForm.new(musician_applicant_form_params)
-    @information_form.user = current_user
+    @musician_applicant_form.user = current_user
 
     respond_to do |format|
       if @musician_applicant_form.save

@@ -22,6 +22,7 @@ class BenUserUpdateFormsController < ApplicationController
   # POST /ben_user_update_forms or /ben_user_update_forms.json
   def create
     @ben_user_update_form = BenUserUpdateForm.new(ben_user_update_form_params)
+    @ben_user_update_form.ben = current_user
 
     respond_to do |format|
       if @ben_user_update_form.save

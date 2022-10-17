@@ -22,6 +22,7 @@ class InvestorSupportFormsController < ApplicationController
   # POST /investor_support_forms or /investor_support_forms.json
   def create
     @investor_support_form = InvestorSupportForm.new(investor_support_form_params)
+    @investor_support_form.investor = current_user
 
     respond_to do |format|
       if @investor_support_form.save
